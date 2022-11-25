@@ -20,12 +20,13 @@ def three_split(num: str):
         for j in range(i + 1, n):
             multiplicand, multiplicator, product = int(num[0:i]), int(num[i:j]), int(num[j:])
             triple = [multiplicand, multiplicator, product]
+            print(triple)
             if multiplicator * multiplicand == product:
                 valid_triples.append(triple)
     return valid_triples
 
 
-if __name__ == '__main__':
+def solve():
     result = []
     for permutation in permutations('123456789'):
         spl = three_split(permutation)
@@ -40,3 +41,7 @@ if __name__ == '__main__':
     for i in range(len(result)):
         products.add(result[i][0][2])
     print(sum(products))
+
+
+if __name__ == '__main__':
+    three_split('123456')
