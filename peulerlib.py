@@ -15,3 +15,7 @@ def primes():
                 sieve.setdefault(p + q, []).append(p)
             del sieve[q]
         q += 1
+
+
+def is_pandigital(n: int) -> int:
+    return set(str(n)).issuperset('0123456789')

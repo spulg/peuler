@@ -1,4 +1,4 @@
-def is_pan(n: int) -> int:
+def is_pandigital(n: int) -> int:
     return set(str(n)).issuperset('123456789')
 
 
@@ -13,10 +13,10 @@ def con_prod(n: int, number_list) -> int:
 
 
 if __name__ == '__main__':
-    print(is_pan(1234))
-    print(is_pan(987654321))
-    print(is_pan(con_prod(9, [1, 2, 3, 4, 5])))
-    print(is_pan(con_prod(192, [1, 2, 3])))
+    print(is_pandigital(1234))
+    print(is_pandigital(987654321))
+    print(is_pandigital(con_prod(9, [1, 2, 3, 4, 5])))
+    print(is_pandigital(con_prod(192, [1, 2, 3])))
 
     pan_digital_nums = []
     num_list = [1]
@@ -26,7 +26,7 @@ if __name__ == '__main__':
             k = con_prod(i, num_list)
             if len(str(k)) > 9:
                 break
-            if is_pan(k):
+            if is_pandigital(k):
                 pan_digital_nums.append(k)
 
     print(pan_digital_nums)
