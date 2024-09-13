@@ -48,18 +48,6 @@ def solve():
     print(i)
 
 
-
-
 if __name__ == '__main__':
     solve()
-
-
-    #k = 7
-    #print(get_ratio_of_square(k))
-#
-    #while get_ratio_of_square(k) > 0.1:
-    #    print(get_ratio_of_square(k))
-    #    k += 1
-#
-    #print(k)
 
