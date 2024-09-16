@@ -13,7 +13,7 @@ start = time.monotonic()
 result = 2
 
 for i in range(b, 1, -1):
-    result = (2 * result) % m
+    result = (result << 1) % m
 
 print((((28433 * result) % m) + 1) % m)
 
@@ -47,3 +47,11 @@ print((((28433 * result) % m) + 1) % m)
 
 end = time.monotonic()
 print(f"Duration: {(end - start)} s")
+
+# maybe we can match the builtin speed by using this version from the project euler forum:
+
+# calculating 2^7830457 by multiplying 2 7830457  times with itself is not quite a fast algoritm.
+# E.g to calculate 2^19 you can first calculate 2, 2^2,  2^4, 2^8 and 2^16 by squaring 2 4 times.
+# Then calculate 2^19=2^16*2^2*2.
+# Which "squares" to multiply follows directly from the binary representation of 19: 10011
+# It is quite straightforward the put this into an algoritm.
